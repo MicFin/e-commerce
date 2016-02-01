@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20160201001522) do
 
   create_table "books", force: :cascade do |t|
     t.string   "name"
+    t.string   "author"
     t.text     "description"
     t.integer  "price"
     t.boolean  "availability", default: true
