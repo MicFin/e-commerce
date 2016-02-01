@@ -19,7 +19,7 @@ class BooksController < ApplicationController
 
   # GET /books/1/edit
   def edit
-      authorize! :manage, @book
+    authorize! :manage, @book
   end
 
   # POST /books
@@ -41,7 +41,7 @@ class BooksController < ApplicationController
   # PATCH/PUT /books/1
   # PATCH/PUT /books/1.json
   def update
-         authorize! :manage, @book
+    authorize! :manage, @book
     respond_to do |format|
       if @book.update(book_params)
         format.html { redirect_to @book, notice: 'Book was successfully updated.' }
@@ -72,6 +72,6 @@ class BooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
-      params.require(:book).permit(:name, :description, :price, :availability, :author)
+      params.require(:book).permit(:name, :description, :price, :availability, :author, :image, :resource)
     end
 end

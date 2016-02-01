@@ -30,6 +30,8 @@ gem "simple_form"
 gem 'devise', :git => 'https://github.com/plataformatec/devise.git'
 
 gem 'cancan'
+
+gem 'paperclip'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
